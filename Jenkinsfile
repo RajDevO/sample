@@ -4,21 +4,21 @@ pipeline {
 
    stages {
    
-     stage('Install Dependencies') { 
+     stage('Build') { 
         steps { 
-           sh 'npm install' 
+           echo 'Build' 
         }
      }
      
      stage('Test') { 
         steps { 
-           sh 'echo "testing application..."'
+           echo 'echo "testing application..."'
         }
       }
 
          stage("Deploy application") { 
          steps { 
-           sh 'echo "deploying application..."'
+           echo 'echo "deploying application..."'
          }
 
      }
